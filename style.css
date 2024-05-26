@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://midias.correiobraziliense.com.br/_midias/jpg/2023/10/09/675x450/1_a_nave_espacial_orbita_o_planeta_no_ceu_noturno_estrelado_da_galaxia_explorando_o_fundo_gerado_pela_ia-30015297.jpg?20231009150004?20231009150004'); /* Substitua 'caminho/para/sua/imagem.jpg' pelo caminho real para a sua imagem */
+    background-size: cover;
+    background-position: center;
+}
+
+.title-box {
+    text-align: center; /* Centraliza o conteúdo */
+    background-color: #f7f7f7d5; /* Cor de fundo da caixa */
+    padding: 20px; /* Espaçamento interno */
+    margin-bottom: 20px; /* Margem inferior para separar do conteúdo abaixo */
+}
+
+.title-box h1 {
+    font-size: 36px; /* Tamanho do texto */
+    color: #0d11e4; /* Cor do texto */
+}
+
+
+/* Estilos para o container de asteroides */
+.neo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* Estilos para cada item de asteroide */
+.neo-item {
+    width: 45%; /* Largura ajustável conforme necessário */
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para os asteroides não perigosos */
+.neo-item.safe {
+    background-color: #0fd87a; /* Verde claro */
+}
+
+/* Estilos para os asteroides potencialmente perigosos */
+.neo-item.hazardous {
+    background-color: #e65e6b; /* Vermelho claro */
+}
+
+/* Estilos para os cabeçalhos dos asteroides */
+.neo-item h3 {
+    margin-top: 0;
+}
+
+/* Estilos para os detalhes dos asteroides */
+.neo-item p {
+    margin: 5px 0;
+}
+
+/* Estilos para a linha horizontal */
+.neo-item hr {
+    border: none;
+    border-top: 1px solid #ddd;
+}

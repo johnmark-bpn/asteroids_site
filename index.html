@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neo Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div>
+        <div class="title-box">
+            <h1 id="neo-title">Asteróides Próximos à Terra</h1>
+        </div>
+        
+        <div class="neo-container">
+            {% for neo_item in neo_data %}
+            <div class="neo-item {% if neo_item.hazardous %}hazardous{% else %}safe{% endif %}">
+                <h3>{{ neo_item.name }}</h3>
+                <p>Magnitude Absoluta: {{ neo_item.magnitude }}</p>
+                <p>Diâmetro Estimado (m): {{ neo_item.diameter }}</p>
+                <p>Potencialmente Perigoso: {% if neo_item.hazardous %}Sim{% else %}Não{% endif %}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+<script>
+        // Obtém a data atual
+        var currentDate = new Date();
+        
+        // Formata a data como "DD/MM/AAAA"
+        var formattedDate = currentDate.toLocaleDateString('pt-BR');
+        
+        // Atualiza o título com a data atual
+        document.getElementById('neo-title').innerText += " em " + formattedDate;
+    </script>
+        
+</body>
+</html>
